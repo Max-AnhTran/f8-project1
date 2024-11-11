@@ -4,6 +4,11 @@
 :root {
     --primary-color: #0f1b4c;
 }
+
+html, body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -48,18 +53,31 @@ a {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+/* Header Stick */
+
+.hd-stick {
+    padding-top: 26px;
+    background: #e6f0ff;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
 
 /* Header */
 .header {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
+    background-color: #e6f0ff;
 }
 
 .navbar ul {
@@ -93,10 +111,6 @@ a {
     padding-top: 36;
     padding: 13px 16px;
     font-size: 1.4rem;
-}
-
-.hero {
-    margin-top: 130px;
 }
 
 .hero .info {
@@ -157,7 +171,7 @@ a {
     line-height: 2rem;
 }
 
-.desc:last-child {
+.clients .desc:last-child {
     margin-top: -7px;
 }
 
@@ -172,10 +186,22 @@ a {
     align-items: center;
 }
 
+.clients .images a {
+    display: flex;
+    align-items: center;
+    height: 91px;
+    padding: 0 26px;
+    border-radius: 12px;
+}
+
+.clients .images a:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* GUIDES */
 
 .guides {
-    margin-top: 81px;
+    margin-top: 40px;
     padding: 89px 0 79px;
     text-align: center;
 }
@@ -642,7 +668,7 @@ a {
     display: flex;
     width: 27px;
     height: 28px;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     border-radius: 4px;
 }
 
